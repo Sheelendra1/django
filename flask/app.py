@@ -1,0 +1,26 @@
+from flask import Flask,request, redirect, url_for, session, Response
+
+app = Flask(__name__)
+app.secret_key = 'supersecretkey'
+
+@app.route('/', methods = ['POST', 'GET'])
+
+def login():
+    if request.method =='POST':
+        username = request.form.get('username')
+        password = request.form.get('password')
+        if(username=='admin' and password == '123'):
+            session['user'] = username
+            return redirect(url_for['welcome'])
+        else:
+            return Response('Invalid Credentials',401)
+           
+    return '''
+        <h2>login page</h2>
+        <form method="post">
+            username: <input type="text" name="username"><br>
+            password: <input type="text" name="password"><br>
+            <input type="submit" value="login">
+        '''
+
+
