@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pind Balluchi | Authentic Indian Dining</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;300;400;500;700;900&amp;family=Noto+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11d462",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#102218",
+                        "wood-dark": "#1a1614",
+                        "stone-grey": "#3d423f"
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "sans-serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>.wood-texture {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://lh3.googleusercontent.com/aida-public/AB6AXuDXHmJnI8JKZiC2ds91G86wNNKluay23b0l_AXow3Uy8fq8QWJ4KisP9_elwyttD-1r9KXfnlg2X5ztk68vSLH-Ex360nhD1qFVO6Vju7zYKFHfpEk_7hsjqfeW8kkyRyBh2y8R2VqQ2hg5p59AQW9NY8RZY6nFLjWsqMD2JbOSe6FRrYSIighmP0MJmuGFQsjqQBGcvgc_KwNXzOui4JabS0JSIPkj5TOCT740H78RAeEP9xFfGpxQtNi4Cf8JiMZ8dT2yPxEkjAXH);
+    background-size: cover
+    }
+.misty-forest {
+    background-image: linear-gradient(to bottom, rgba(16, 34, 24, 0.4), rgba(16, 34, 24, 0.9)), url(https://lh3.googleusercontent.com/aida-public/AB6AXuB-Fr9byDcJ3y-1bPY_fzZPVdp9kt_scR8loVMg3FDUX8kHSnIgb7qzdcrQw7oLTo6xs_QPo3aR-YSQA-U8yyB-kXWKcd-BpLqACN_aBCKZB6PyNO57l5pZDBjFPO6ycDmOxs7GG7boLWk18fHzndKEPdSP0Hrg6TUi1PATRPYlEDuh10cOpvzzrnjjaxgG5ZqXPHumRyw0BD2NVz3a9nMPp3cgJMbQ1ODfzsru7wAjqG5m6CqHyoXdMIxf4_Gs4zeZvFWsFQSjudhg);
+    background-size: cover;
+    background-position: center
+    }
+.ruin-texture {
+    background-image: linear-gradient(rgba(16, 34, 24, 0.8), rgba(16, 34, 24, 0.8)), url(https://lh3.googleusercontent.com/aida-public/AB6AXuCvg-XBT7Ojk5CCfMlEnFPhkUhLwEwgRoVs5LtItZ3We3bOnJjhzGmTS2BBK4hs_QDjMqWbsT_w4gl6Jk7gKWop99Ulka5kDsgpdf9n2e0tFtGOYrpIK1ORpmrwsvLfb6j_9DoWDgPCZTFhSo2u8KqvQOfoMCguxlvdnTUOJ2f306VBrVMbJ3opdbe7cL-U_oXtR8-mRt-P_7exJTG69CaaWjwD70heyCjRzS8A4B8KRrObsuPU734jMRyy2OiFhPAkx9MBpjHO-3PT);
+    background-size: cover
+    }</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 z-50 w-full backdrop-blur-md border-b border-white/10 px-6 py-4 md:px-20 lg:px-40">
+<div class="max-w-[1200px] mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="text-primary size-8">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_535)">
+<path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs><clippath id="clip0_6_535"><rect fill="white" height="48" width="48"></rect></clippath></defs>
+</svg>
+</div>
+<h1 class="text-xl font-black tracking-tight uppercase">Pind Balluchi</h1>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Menu</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Locations</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Our Story</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Gallery</a>
+</nav>
+<button class="bg-primary text-background-dark px-6 py-2 rounded-lg font-bold text-sm tracking-wide hover:brightness-110 transition-all">
+                Book a Table
+            </button>
+</div>
+</header>
+<!-- HeroSection -->
+<section class="relative min-h-screen flex items-center justify-center pt-20 misty-forest" data-alt="misty deep green forest with sunlight rays">
+<div class="max-w-[960px] w-full px-6 flex flex-col items-center text-center">
+<div class="mb-6 p-1 px-4 rounded-full border border-primary/30 bg-primary/10 backdrop-blur-sm">
+<span class="text-primary text-xs font-bold tracking-[0.2em] uppercase">Authentic Punjabi Cuisine</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-black leading-[1.1] mb-6 tracking-tight">
+                Experience Authentic <span class="text-primary">Flavors</span> Amidst Nature
+            </h1>
+<p class="text-lg md:text-xl text-white/80 max-w-[700px] mb-10 leading-relaxed">
+                Indulge in a cinematic dining experience where the lushness of a misty forest meets the rugged elegance of ancient ruins.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
+<button class="bg-primary text-background-dark min-w-[200px] py-4 rounded-lg font-bold text-lg hover:scale-105 transition-transform">
+                    Reserve Now
+                </button>
+<button class="bg-white/10 backdrop-blur-md border border-white/20 min-w-[200px] py-4 rounded-lg font-bold text-lg hover:bg-white/20 transition-all">
+                    View Our Menu
+                </button>
+</div>
+</div>
+<!-- Subtle Scroll Down Icon -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
+<span class="text-[10px] font-bold uppercase tracking-[0.3em]">Explore</span>
+<span class="material-symbols-outlined animate-bounce">expand_more</span>
+</div>
+</section>
+<!-- SectionHeader & FeatureSection -->
+<section class="py-24 px-6 md:px-20 lg:px-40 ruin-texture" data-alt="ancient grey stone ruin texture background">
+<div class="max-w-[1200px] mx-auto">
+<div class="flex flex-col md:flex-row gap-12 items-end mb-16">
+<div class="flex-1">
+<h2 class="text-primary font-bold text-sm tracking-widest uppercase mb-4">Our Heritage</h2>
+<h3 class="text-4xl md:text-5xl font-black mb-6">Authentic Flavors, Organic Roots</h3>
+<p class="text-white/70 text-lg leading-relaxed max-w-[600px]">
+                        For decades, Pind Balluchi has been synonymous with the heart of Punjab. We bring the essence of the village to your table, merging traditional earthen cooking with a premium forest-themed ambiance.
+                    </p>
+</div>
+<div class="flex-shrink-0">
+<div class="bg-white/5 p-8 rounded-xl border border-white/10 backdrop-blur-xl">
+<div class="text-primary text-4xl font-black mb-1">30+</div>
+<div class="text-sm uppercase tracking-tighter opacity-60">Years of Legacy</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-wood-dark/50 p-4 rounded-xl border border-white/5 hover:border-primary/50 transition-all group">
+<div class="aspect-[4/3] rounded-lg overflow-hidden mb-6 bg-stone-grey">
+<img alt="Rustic restaurant interior" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="interior of rustic forest themed restaurant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD48Tdp__30PNbKgeqWoez-b_FXj5AvI7xdBM0wCpTkBr0yXTK3zg-TYhrS7Ox5endHmsY6dbVcyXKTU1S60TOCuw1AmJW71VnvQlyxqLCG78U5Ez4YegtRdH6fYDm6FrX62Qn6tHW3dgjN5wZZ4fGBEohpsN6kghmVzq2o70RllrECr9d_QGS6pqx-C94EO0by9FZfZ_79hgoMWD1ZeiRMQVO5rMYs8OvRvv9Z7Clo8XlRQY7CGJNIQGkuZp7XRCz3P_UsLHfEMeoI"/>
+</div>
+<h4 class="text-xl font-bold mb-2">Rustic Ambiance</h4>
+<p class="text-white/60 text-sm leading-relaxed">Ancient stone ruins and weathered wood aesthetics combined with soft lighting.</p>
+</div>
+<div class="bg-wood-dark/50 p-4 rounded-xl border border-white/5 hover:border-primary/50 transition-all group">
+<div class="aspect-[4/3] rounded-lg overflow-hidden mb-6 bg-stone-grey">
+<img alt="Platter of Indian food" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="traditional indian platter on wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSolqHNIsxibGDJebAimFYJ4uDMC4RBwpXd0sIx3A5Pcd6JME0Fd5K1wbw6BaLHYHBMUlWVBY1BQr7-bo-ecC7wZfdLxXI8A-r5UDlk6NAkcFItYqXakfOFrE2jA-0ZovB0MwnJrXrC6GzVtQubUIpTXHtm-4MSUcAyMjZoMz-DVxjv71iC0hsmCNE84JwLxaHdF-HVvOv26EiMiWM-BXQp5s1c1zgrJUpdYUuFZayzHAt1Y2Sp1msm6YYUKjPbq2wiox1sbIiwOpD"/>
+</div>
+<h4 class="text-xl font-bold mb-2">Chef's Specials</h4>
+<p class="text-white/60 text-sm leading-relaxed">Hand-picked signature dishes prepared in traditional clay ovens by master chefs.</p>
+</div>
+<div class="bg-wood-dark/50 p-4 rounded-xl border border-white/5 hover:border-primary/50 transition-all group">
+<div class="aspect-[4/3] rounded-lg overflow-hidden mb-6 bg-stone-grey">
+<img alt="Premium cocktail" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="elegant cocktail in a forest setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZofETejdWRTq9bNj_06RcZZwkh0kd8VetiIpgtWfSECp1J9suLqqJiAEX2MyQ3ywppi0VaYOGtPjMMbrPKgxOCCTtUq_6Yw9dxlzqUZjEhvaHIqpNeiX98L2444m39HQhL-xjRL8EeKedv22oj6brQ32tpZdvlnHsUErXrkesnxWcLX9Jrcs4EZiBYm1ZPNPjhgrKSi9qPZIDF_nkVneygB6VU6PsP088XVYZoQIz-YZUUVZ2MEZDvdCxVmCG7fYRSbdvmutjHIZt"/>
+</div>
+<h4 class="text-xl font-bold mb-2">Premium Dining</h4>
+<p class="text-white/60 text-sm leading-relaxed">An immersive, high-end culinary journey featuring the finest regional delicacies.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Chef's Specials Grid Section -->
+<section class="py-24 px-6 md:px-20 lg:px-40 bg-background-dark/80">
+<div class="max-w-[1200px] mx-auto">
+<div class="flex items-center justify-between mb-16">
+<div>
+<h2 class="text-primary font-bold text-sm tracking-widest uppercase mb-4">The Selection</h2>
+<h3 class="text-4xl font-black">Signature Delicacies</h3>
+</div>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 hover:text-white hover:border-white transition-all" href="#">View All Menu</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Item 1 -->
+<div class="relative group cursor-pointer">
+<div class="aspect-square rounded-xl overflow-hidden mb-4 shadow-2xl">
+<img alt="Butter Chicken" class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="creamy orange butter chicken in bowl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWxZ-3RFfJ5j7f8stDS2v_mRBxom0j-ZUVkVi3KGLH7T9xsnR5sno4Zp7pad1lfHRt36YTuXc2zz2Fi6GIn3dGFl8LKV_R1yubEDXU0cIQLoTW21LWXQ_b_A11mTtXPAMswLwO92T2i5kvhOTd1xuL8FjZy8vhVH7sxwjemRJ5plZ-zLfE4chQmbJtJzmdv7ppv7jTK-x8mryGnsjQycU15BqJWgCk0DoZ9wEV9U-JKuq7dMPtYnMINrf6Gi6yIbwaFCLj-6gUtHe2"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h5 class="font-bold text-lg">Murgh Makhani</h5>
+<p class="text-xs text-white/50">Slow-cooked in clay oven</p>
+</div>
+<span class="text-primary font-black">$24</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="relative group cursor-pointer">
+<div class="aspect-square rounded-xl overflow-hidden mb-4 shadow-2xl">
+<img alt="Biryani" class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="hyderabadi biryani with saffron rice" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfMSK_UPD219RAREsxjC5dcQgPv04BobR6JnCKDtJdwTQNeOxy-vA8xpsDsQK-m75ekO-vhS_Y2jIJNmiJPq8xILqXCH0AH78yeMjBDee-RtQcnYTGaoG8r5aqNJI_rl8ZATf4EzIlV_VnhFPtSjOcHACoy2dVPKN6Bx40XFGoXRSxT4JO9_z3ZdIvRt7IcFwe2wfeNAE91F-RuD3Z2_Oewg3tU9lUMC-Ax4jczgGB_kWS5XXYBasLFLOUDhlblUYbVDEnNdWvTnB6"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h5 class="font-bold text-lg">Pind Biryani</h5>
+<p class="text-xs text-white/50">Fragrant basmati, secret spices</p>
+</div>
+<span class="text-primary font-black">$22</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="relative group cursor-pointer">
+<div class="aspect-square rounded-xl overflow-hidden mb-4 shadow-2xl">
+<img alt="Samosas" class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="crispy golden samosas with chutney" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6QRfmoETJ0YnZeDz07CIB7DPREAAimt38gHPKu4W-9kEUcySWhrFBA2E5ZMfCT1R0cK0YNcCwPEJD7cYyzia6iMv6taWcDF_LFzF1ZqrRQ-SOPHLpE4XHtom0ViDItT_pSHCAxapp9etw__Qogn17RsT5Co4EYPEv3t2xXsgD56S6YLCwlATcHrCNFmdIgYWA6BaayQMcQ1oCAEhTUd_cWLo2Fl8YdeTiw8dyDC3Ndm87MaX5NehwbAHQ16buSsUP3YMX7eAnxJL_"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h5 class="font-bold text-lg">Kadhai Paneer</h5>
+<p class="text-xs text-white/50">Fresh cottage cheese, bell peppers</p>
+</div>
+<span class="text-primary font-black">$19</span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="relative group cursor-pointer">
+<div class="aspect-square rounded-xl overflow-hidden mb-4 shadow-2xl">
+<img alt="Kebab" class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="skewered grilled meat kebabs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASlakZJ1-rG38PctSP4XgP0bgoUgokliVK0y2addJFuXy70g-nM0QfRA6Hn10JyeIkqRcSTharlpdUeMddsO4bZUigjwjBuXNFwpnyqS4DWo-G9v_z8LK01N2nHF9kliApFtuV_6Yrvou7-8YRl45dbChM0L-apDKNRQuGtfK-PRJnaFTsKP3c9o7QnZOVx1ArQA62Qw7TfgtGxwHdulsLiPePwNNJHSVzkwADPxfNKb1Keh8zAIKYJAXr6Flkjw8W99pMYmnK1-pl"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h5 class="font-bold text-lg">Mutton Seekh</h5>
+<p class="text-xs text-white/50">Minced meat, traditional herbs</p>
+</div>
+<span class="text-primary font-black">$26</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Reservation Section with Wood Texture -->
+<section class="py-24 px-6 md:px-20 lg:px-40 wood-texture" data-alt="dark weathered wood planks background">
+<div class="max-w-[1000px] mx-auto bg-background-dark/40 backdrop-blur-md p-10 md:p-16 rounded-3xl border border-white/10 text-center shadow-2xl">
+<h2 class="text-3xl md:text-5xl font-black mb-6">Join us for an Unforgettable Evening</h2>
+<p class="text-white/70 mb-10 max-w-[600px] mx-auto text-lg leading-relaxed">
+                Whether it's a romantic dinner or a family celebration, reserve your spot in our forest oasis.
+            </p>
+<form class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold uppercase tracking-widest text-primary">Date</label>
+<input class="bg-white/5 border border-white/20 rounded-lg p-3 text-white focus:border-primary outline-none focus:ring-1 focus:ring-primary transition-all" type="date"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold uppercase tracking-widest text-primary">Guests</label>
+<select class="bg-white/5 border border-white/20 rounded-lg p-3 text-white focus:border-primary outline-none focus:ring-1 focus:ring-primary transition-all">
+<option class="bg-wood-dark">2 People</option>
+<option class="bg-wood-dark">4 People</option>
+<option class="bg-wood-dark">6+ People</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold uppercase tracking-widest text-transparent hidden md:block">Action</label>
+<button class="bg-primary text-background-dark h-[50px] md:h-full rounded-lg font-black text-lg hover:brightness-110 transition-all" type="submit">
+                        Book Now
+                    </button>
+</div>
+</form>
+</div>
+</section>
+<!-- Map & Footer -->
+<footer class="py-20 px-6 md:px-20 lg:px-40 bg-[#0a150e]">
+<div class="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-16 border-b border-white/10 pb-16">
+<div class="space-y-6">
+<div class="flex items-center gap-3">
+<div class="text-primary size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<span class="text-xl font-black uppercase">Pind Balluchi</span>
+</div>
+<p class="text-white/50 text-sm leading-relaxed">
+                    Bringing the rich cultural heritage and culinary excellence of Punjab to the heart of the modern world.
+                </p>
+<div class="flex gap-4">
+<div class="size-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:text-background-dark cursor-pointer transition-all">
+<span class="material-symbols-outlined text-sm">share</span>
+</div>
+<div class="size-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:text-background-dark cursor-pointer transition-all">
+<span class="material-symbols-outlined text-sm">mail</span>
+</div>
+<div class="size-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:text-background-dark cursor-pointer transition-all">
+<span class="material-symbols-outlined text-sm">call</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<h6 class="font-bold mb-6 text-primary">Quick Links</h6>
+<ul class="space-y-4 text-sm text-white/60">
+<li><a class="hover:text-white" href="#">Our Menu</a></li>
+<li><a class="hover:text-white" href="#">Gift Cards</a></li>
+<li><a class="hover:text-white" href="#">Careers</a></li>
+<li><a class="hover:text-white" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-bold mb-6 text-primary">Visit Us</h6>
+<ul class="space-y-4 text-sm text-white/60">
+<li>123 Forest Lane</li>
+<li>Green Hills Estate</li>
+<li>info@pindballuchi.com</li>
+<li>+1 (555) 234-5678</li>
+</ul>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden border border-white/10 h-64 shadow-2xl">
+<img alt="Map" class="w-full h-full object-cover grayscale opacity-50 contrast-125" data-location="New Delhi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoGhCbuTz7S1fL8sl4d46S84qMde2BPczLVMoIxSIBMtep1xmxf6CLZSEkn6Th3E6PsGeatgT52CVl0vMGZWGr2mpp-5LvEYg7xBeNseA8b__GzmAXjJHMlcLK-dC7sceY0y6ijLXHDidUZxKZAiutOxpIT2EbvIrmea01JK9SxyrrT37BC3tuadzJilvTVO580Lc8y_QwuEo_vIsZdNHaHZtEIGePz9MJu16t4H8HbAjG_i78fWFXmM6sx7y3LRddE_3UqptL4yrP"/>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-white/30 uppercase tracking-[0.2em] font-bold">
+<p>© 2024 Pind Balluchi Restaurant. All rights reserved.</p>
+<p>Designed for the ultimate dining experience</p>
+</div>
+</footer>
+</body></html>

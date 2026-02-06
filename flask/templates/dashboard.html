@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Welcome, {{ user.name }}</h2>
+
+    {% if user.logged_in %}
+        <p><strong>Status:</strong> Logged In</p>
+    {% else %}
+        <p><strong>Status:</strong> Logged Out</p>
+    {% endif %}
+
+    <h3>Hobbies</h3>
+    <ul>
+        {% for hobby in user.hobbies %}
+            <li>{{ hobby }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
