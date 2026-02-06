@@ -1,34 +1,34 @@
 from flask import Flask, render_template, request, redirect, url_for
+import sqlite3
+from db import init_db
 
 app = Flask(__name__)
+init_db()
 
-students = []
-
-@app.route("/")
-def index():
-    return render_template("index.html")
-
-@app.route("/register", methods=["GET", "POST"])
-def register():
-    error = None
+@app.route("/", methods=["GET", "POST"])
+def form():
     if request.method == "POST":
         name = request.form.get("name")
         email = request.form.get("email")
-        course = request.form.get("course")
 
-        if '@' not in email:
-            error = "please enter valid email"
-            return render_template("register.html", error=error)
-        
-        elif name and email and course:
-            students.append({"name": name, "email": email, "course": course})
-            return redirect(url_for("students_page"))
-            
-    return render_template("register.html",error=error)
+        if not name or not email:
+            return "All fields are required"
 
-@app.route("/students")
-def students_page():
-    return render_template("students.html", students=students)
+        conn = sqlite3.connect("users.db")
+        cursor = conn.cursor()
+
+        cursor.execute(
+            "INSERT INTO users (name, email) VALUES (?, ?)",
+            (name, email)
+        )
+
+        conn.commit()
+        conn.close()
+
+        return "Data saved successfully"
+    return render_template("form.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
+
