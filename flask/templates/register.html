@@ -1,0 +1,26 @@
+﻿{% extends 'index.html' %}
+{% block mainbody %}
+
+<h2>Register Student</h2>
+{% if error %}
+<p >{{ error }}</p>
+{% endif %}
+<form action="/register" method="POST">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email" required><br><br>
+
+    <label for="course">Course:</label><br>
+    <select id="course" name="course">
+        <option value="Python">Python</option>
+        <option value="Java">Java</option>
+        <option value="Web Development">Web Development</option>
+        <option value="Data Science">Data Science</option>
+    </select><br><br>
+
+    <button type="submit">Register</button>
+</form>
+
+{% endblock %}
