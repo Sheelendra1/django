@@ -31,6 +31,10 @@ def init_db():
         db.commit()
 
 # Route for Signup
+@app.route('/')
+def home():
+    return redirect(url_for('signup'))
+
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     if request.method == 'POST':
