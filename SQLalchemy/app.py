@@ -1,43 +1,53 @@
-from flask import Flask, render_template, request, flash, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, send_file, flash
 from flask_sqlalchemy import SQLAlchemy
-from flask_bcrypt import Bcrypt
+import io
 
 app = Flask(__name__)
-
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///images.db'
 app.config['SECRET_KEY'] = 'secret_key'
 
 db = SQLAlchemy(app)
-bcrypt = Bcrypt(app)
 
-class User(db.Model):
-    sno = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(200), nullable=False, unique=True)
-    password = db.Column(db.String(200), nullable=False)
+class Image(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    filename = db.Column(db.String(200), nullable=False)
+    data = db.Column(db.LargeBinary, nullable=False)
 
 with app.app_context():
     db.create_all()
 
+# ---------- UPLOAD IMAGE ----------
 @app.route('/', methods=['GET', 'POST'])
-def home():
+def upload_image():
     if request.method == 'POST':
-        username = request.form.get('username')
-        password = request.form.get('password')
+        file = request.files.get('image')
 
-        if User.query.filter_by(username=username).first():
-            flash("User already exists")
-            return redirect(url_for('home'))
+        if not file or file.filename == '':
+            flash("No file selected")
+            return redirect('/')
 
-        hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')
+        image = Image(
+            filename=file.filename,
+            data=file.read()   # convert image to bytes
+        )
 
-        new_user = User(username=username, password=hashed_password)
-        db.session.add(new_user)
+        db.session.add(image)
         db.session.commit()
 
-        flash("User registered successfully!")
-        return redirect(url_for('home'))
+        flash("Image stored in database successfully")
+        return redirect('/')
 
-    return render_template('form.html')
+    images = Image.query.all()
+    return render_template('upload.html', images=images)
+
+# ---------- DISPLAY IMAGE ----------
+@app.route('/image/<int:image_id>')
+def get_image(image_id):
+    image = Image.query.get_or_404(image_id)
+    return send_file(
+        io.BytesIO(image.data),
+        mimetype='image/jpeg'
+    )
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Image to DB</title>
+</head>
+<body>
+
+<h2>Upload Image (Stored in Database)</h2>
+
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="image" accept="image/*" required>
+    <button type="submit">Upload</button>
+</form>
+
+{% with messages = get_flashed_messages() %}
+  {% for msg in messages %}
+    <p>{{ msg }}</p>
+  {% endfor %}
+{% endwith %}
+
+<hr>
+
+<h3>Stored Images</h3>
+{% for img in images %}
+    <img src="{{ url_for('get_image', image_id=img.id) }}" width="150">
+{% endfor %}
+
+</body>
+</html>
