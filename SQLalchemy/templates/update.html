@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update User</title>
+</head>
+<body>
+
+<h1>Update User Details</h1>
+
+<form method="POST" action="/update">
+
+        <label for="sno">Serial Number (SNo) to update:</label><br>
+        <input type="number" id="sno" name="sno" placeholder="Enter SNo of user" required>
+    <br>
+        <label for="username">New Username:</label><br>
+        <input type="text" id="username" name="username" placeholder="Enter new username" required>
+    <br>
+        <label for="password">New Password:</label><br>
+        <input type="password" id="password" name="password" placeholder="Enter new password" required>
+    <br>
+
+    <button type="submit">Update User</button>
+
+</form>
+
+<p><a href="/">Go back to registration</a></p>
+
+</body>
+</html>
