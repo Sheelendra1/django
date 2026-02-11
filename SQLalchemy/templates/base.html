@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<nav>
+<b>Blogger</b>
+<span style="float:right">
+{% if session.get('user_id') %}
+<a href="/create">Create Blog</a> |
+<a href="/logout">Logout</a>
+{% else %}
+<a href="/login">Login</a> |
+<a href="/register">Register</a>
+{% endif %}
+</span>
+</nav>
+<hr>
+
+{% block content %}{% endblock %}
+
+</body>
+</html>

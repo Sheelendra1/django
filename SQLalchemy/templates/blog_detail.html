@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ blog.title }}</h2>
+<p>{{ blog.content }}</p>
+<p>By {{ blog.author.username }} at {{ blog.created_at }}</p>
+
+{% if blog.user_id == session.get('user_id') %}
+<a href="/edit/{{ blog.id }}">Edit</a> |
+<a href="/delete/{{ blog.id }}">Delete</a>
+{% endif %}
+{% endblock %}

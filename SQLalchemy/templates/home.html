@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>All Blogs</h2>
+
+{% for blog in blogs %}
+<div style="border:1px solid #ccc; padding:15px; width:300px; display:inline-block; margin:10px">
+<h3>{{ blog.title }}</h3>
+<p>{{ blog.content[:50] }}...</p>
+<p>By {{ blog.author.username }} at {{ blog.created_at.date() }}</p>
+<a href="/blog/{{ blog.id }}">Read More</a>
+</div>
+{% endfor %}
+
+{% endblock %}

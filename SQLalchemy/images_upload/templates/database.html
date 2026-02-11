@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Database</title>
+</head>
+<body>
+
+<h2>Stored Users</h2>
+
+<table border="1" cellpadding="8">
+    <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Image</th>
+    </tr>
+
+    {% for user in users %}
+    <tr>
+        <td>{{ user.id }}</td>
+        <td>{{ user.username }}</td>
+        <td>
+            {% if user.image %}
+                <img src="data:image/jpeg;base64,{{ user.image }}" width="120">
+            {% else %}
+                No Image
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+<a href="/">Back</a>
+
+</body>
+</html>
