@@ -1,47 +1,19 @@
-from flask import Flask, render_template, request
-from flask_sqlalchemy import SQLAlchemy
+from flask import Flask,request,render_template
+app = Flask(__name__)
 
-app=Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///test.db'
-db = SQLAlchemy(app)
-
-class User(db.Model):
-    sno = db.Column(db.Integer, primary_key=True)
-    username=db.Column(db.String(200), nullable=False)
-    password=db.Column(db.String(200), nullable=False)
-
-with app.app_context():
-    db.create_all()
-
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
 def home():
-    message = None
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-        user = User(username=username, password=password)
-        db.session.add(user)
-        db.session.commit()
-        message = "User registered successfully!"
-    return render_template('form.html', message=message)
+    return "Welcome to home"
 
-@app.route('/update', methods=['GET', 'POST'])
-def update():
+@app.route("/form", methods=['GET', 'POST'])
+def form():
     if request.method=='POST':
-        sno=request.form['sno']
-        username=request.form['username']
-        password=request.form['password']
-        user = User.query.filter_by(sno=sno).first()
+        username=request.form.get('username')
+        email=request.form.get('email')
 
-        if user:
-            user.username = username
-            user.password = password
-            db.session.commit()
-            return "User updated successfully!"
-        else:
-            return "User not found!"
-    return render_template('update.html')
+        return f"welcome {username} | your email {email}"
+    
+    return render_template('form.html')
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)
-
