@@ -7,4 +7,5 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('app/', include('app.urls')),
     path('newapp/', include('newapp.urls')),
+    path('formapp/', include('fromapp.urls'))
 ]
