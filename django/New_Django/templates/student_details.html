@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+</head>
+<body>
+
+<h1>Student List</h1>
+
+{% for student in students %}
+        
+        <p>{{student.name }}</p>
+        <p>Email: {{ student.email }}</p>
+        <p>Age: {{ student.age }}</p>
+        <p>Branch: {{ student.get_branch_display }}</p>
+
+        {% if student.image %}
+            <img src="{{ student.image.url }}">
+        {% else %}
+            <p>No Image</p>
+        {% endif %}
+
+{% empty %}
+    <p>No students found.</p>
+{% endfor %}
+
+</body>
+</html>
