@@ -1,0 +1,12 @@
+to make admin
+
+python manage.py makemigrations
+
+python manage.py migrate
+
+python manage.py createsuperuser
+
+to run server
+python manage.py runserver
+
+
