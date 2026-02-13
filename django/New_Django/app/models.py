@@ -13,6 +13,7 @@ class Student(models.Model):
     email=models.EmailField()
     age=models.IntegerField()
     branch = models.CharField(max_length=20, choices=BRANCH_CHOICES)
+    image = models.ImageField(upload_to='student/', null=True, blank=True)
 
     def __str__(self):
         return self.name
