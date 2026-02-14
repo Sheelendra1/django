@@ -1,0 +1,5 @@
+<h2>login with google</h2>
+
+<a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}">
+    <button>login with google</button>
+</a>
