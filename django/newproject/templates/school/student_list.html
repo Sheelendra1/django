@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student List</title>
+</head>
+<body>
+    <h1>Students</h1>
+    <ul>
+    {% for student in students %}
+        <li>{{ student.name }} - {{ student.age }} ({{ student.email }})</li>
+    {% endfor %}
+    </ul>
+    <p><a href="{% url 'home' %}">Back to Home</a></p>
+</body>
+</html>

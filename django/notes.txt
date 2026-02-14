@@ -1,3 +1,12 @@
+to start virtual envir.
+.venv\Scripts\activate
+
+to make new proj.
+django-admin startproject newproject
+
+to make new app
+django-admin startapp app
+
 to make admin
 
 python manage.py makemigrations
@@ -9,4 +18,5 @@ python manage.py createsuperuser
 to run server
 python manage.py runserver
 
-
+to do crud from cmd
+python manage.py shell

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+</head>
+<body>
+
+<h1>Teacher List</h1>
+
+{% for teacher in teacher %}
+        
+        <p>{{teacher.name }}</p>
+        <p>Email: {{ teacher.email }}</p>
+        <p>Age: {{ teacher.age }}</p>
+        <p>Mob No. : {{ teacher.mob }}</p>
+
+
+
+{% empty %}
+    <p>No teacher found.</p>
+{% endfor %}
+
+</body>
+</html>
