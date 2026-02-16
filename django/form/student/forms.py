@@ -7,5 +7,5 @@ class StudentForm(forms.ModelForm):
         fields = ['first_name', 'last_name', 'email']
 
 
-    def class_age(self):
-        age=self.cleaned_data.get("age")
+    # def class_age(self):
+    #     age=self.cleaned_data.get("age")
