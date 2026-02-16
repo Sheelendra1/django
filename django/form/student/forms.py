@@ -9,3 +9,4 @@ class StudentForm(forms.ModelForm):
 
     # def class_age(self):
     #     age=self.cleaned_data.get("age")
+
