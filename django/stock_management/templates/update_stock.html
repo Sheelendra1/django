@@ -1,0 +1,7 @@
+<h2>Update Stock</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    <input type="number" name="quantity" value="{{ product.quantity }}">
+    <button type="submit">Update</button>
+</form>

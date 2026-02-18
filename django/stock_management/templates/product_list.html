@@ -1,0 +1,21 @@
+<h2>Product List</h2>
+
+<a href="/add/">Add Product</a>
+
+<table border="1">
+<tr>
+    <th>Name</th>
+    <th>Quantity</th>
+    <th>Update</th>
+</tr>
+
+{% for product in products %}
+<tr>
+    <td>{{ product.name }}</td>
+    <td>{{ product.quantity }}</td>
+    <td>
+        <a href="/update/{{ product.id }}">Update</a>
+    </td>
+</tr>
+{% endfor %}
+</table>
